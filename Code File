@@ -1,0 +1,61 @@
+# Import the itertools module for generating permutations
+import itertools
+
+# Import the urllib.request module for downloading the word list from a URL
+import urllib.request
+
+# Function to load the dictionary from a file
+def load_dictionary(file_path):
+    # Open the file in read mode
+    with open(file_path, 'r') as file:
+        # Read all lines, strip whitespace, convert to lowercase, and store in a set for quick lookup
+        valid_words = set(word.strip().lower() for word in file)
+    return valid_words
+
+# Function to generate all permutations of given letters
+def generate_permutations(letters):
+    permutations = set()
+    # Generate permutations of all possible lengths (from 1 to length of letters)
+    for i in range(1, len(letters) + 1):
+        # itertools.permutations generates tuples of permutations
+        for p in itertools.permutations(letters, i):
+            # Join tuple into a string and add to the set of permutations
+            permutations.add(''.join(p))
+    return permutations
+
+# Function to filter valid words from permutations based on the dictionary
+def filter_valid_words(permutations, valid_words):
+    # Return a sorted list of permutations that are in the valid_words set
+    return sorted(word for word in permutations if word in valid_words)
+
+# Function to download the word list from a given URL
+def download_word_list(url, file_path):
+    # Open the URL and read the response
+    response = urllib.request.urlopen(url)
+    data = response.read()
+    # Write the data to a file
+    with open(file_path, 'wb') as file:
+        file.write(data)
+
+# Main function to find valid Scrabble words from given letters
+def scrabble_words(letters, dictionary_file):
+    # Load the dictionary from the specified file
+    valid_words = load_dictionary(dictionary_file)
+    # Generate all permutations of the given letters
+    permutations = generate_permutations(letters)
+    # Filter permutations to find valid words
+    return filter_valid_words(permutations, valid_words)
+
+# URL of the word list to be downloaded
+word_list_url = "https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt"
+# Path to save the downloaded word list
+word_list_file = "words.txt"
+
+# Download the word list from the URL
+download_word_list(word_list_url, word_list_file)
+
+# Use the scrabble_words function to get valid words from "tabind"
+words = scrabble_words("tabind", word_list_file)
+
+# Print the list of valid words
+print(words)
