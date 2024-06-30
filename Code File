@@ -1,3 +1,30 @@
+#*********************************************************************************#
+# FILE: TABIND-Scrabble-Project                                                   #
+#                                                                                 #
+#                                                                                 #
+# DESCRIPTION: The TABIND Scrabble Project aims to develop a program that takes   #
+# the letter combination “tabind” and creates an alphabetical list of all the     #
+# valid words that can be found with those letters. The project utilizes Python   #
+# to generate permutations of the letters and filters them using a                #
+# comprehensive word list.                                                        #
+#                                                                                 #
+# DEVELOPER: Claire Chen                                                          #
+# DEVELOPER PHONE: +1 (XXX) XXX-XXXX                                              #
+# DEVELOPER EMAIL: developer@example.com                                          #
+#                                                                                 #
+# VERSION: 1.0                                                                    #
+# CREATED DATE-TIME: 20240523-10:00 Eastern Time Zone USA                         #
+#                                                                                 #
+# VERSION: 1.1                                                                    #
+# REVISION DATE-TIME: YYYYMMDD-HH:MM                                              #
+# DEVELOPER MAKING CHANGE: First_name Last_name                                   #
+# DEVELOPER MAKING CHANGE: PHONE: +1 (XXX) XXX-XXXX                               #
+# DEVELOPER MAKING CHANGE: EMAIL: first.last@email.com                            #
+#                                                                                 #
+#*********************************************************************************#
+
+#    Scripts start below
+
 # Import the itertools module for generating permutations
 import itertools
 
