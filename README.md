@@ -11,6 +11,3 @@ The TABIND Scrabble Project aims to develop a program that takes the letter comb
 ## Installation
 To get started with the project, follow these steps:
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/yourusername/TABIND-Scrabble-Project.git
