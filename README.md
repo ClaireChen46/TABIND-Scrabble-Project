@@ -8,6 +8,3 @@ The TABIND Scrabble Project aims to develop a program that takes the letter comb
 - Filters and lists valid words using a predefined dictionary.
 - Downloads and processes a word list from a public repository.
 
-## Installation
-To get started with the project, follow these steps:
-
