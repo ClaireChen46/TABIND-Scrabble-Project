@@ -85,3 +85,10 @@ words = scrabble_words("tabind", word_list_file)
 
 # Print the list of valid words
 print(words)
+```
+['a', 'ab', 'abd', 'abit', 'abn', 'abt', 'ad', 'adib', 'adin', 'adit', 'ai', 'aid', 'ain', 'aint', 'ait', 'an', 'and', 'andi', 'ani', 'ant', 'anti', 
+'at', 'ati', 'b', 'ba', 'bad', 'bai', 'bain', 'bait', 'ban', 'band', 'bandi', 'bandit', 'bani', 'bant', 'bat', 'bd', 'bi', 'bid', 'bin', 'bind', 'bint', 'bit', 
+'bn', 'bt', 'd', 'da', 'dab', 'dain', 'daint', 'dan', 'dani', 'dat', 'db', 'di', 'dia', 'dian', 'dib', 'din', 'dint', 'dit', 'dita', 'dn', 'dt', 'i', 'ia', 'ian', 
+'ib', 'iba', 'ibad', 'iban', 'id', 'ida', 'idant', 'in', 'inbd', 'ind', 'int', 'inta', 'it', 'ita', 'itd', 'n', 'na', 'nab', 'nad', 'naib', 'naid', 'nat', 'nb', 'nd', 
+'ni', 'nib', 'nid', 'nit', 'nt', 't', 'ta', 'tab', 'tabi', 'tabid', 'tad', 'tai', 'tain', 'tan', 'tb', 'td', 'ti', 'tib', 'tid', 'tin', 'tina', 'tind', 'tn']
+```
