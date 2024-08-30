@@ -24,10 +24,7 @@
 
 #    Scripts start below
 
-# Import the itertools module for generating permutations
 import itertools
-
-# Import the urllib.request module for downloading the word list from a URL
 import urllib.request
 
 # Function to load the dictionary from a file
@@ -36,6 +33,14 @@ def load_dictionary(file_path):
     with open(file_path, 'r') as file:
         # Read all lines, strip whitespace, convert to lowercase, and store in a set for quick lookup
         valid_words = set(word.strip().lower() for word in file)
+    
+    # Print all single-letter words in the dictionary
+    single_letter_words = {word for word in valid_words if len(word) == 1}
+    print(f"Single-letter words in dictionary: {single_letter_words}")
+    
+    # Filter out invalid single-letter words, only keep 'a' and 'i'
+    valid_words = {word for word in valid_words if len(word) > 1 or word in {'a', 'i'}}
+    
     return valid_words
 
 # Function to generate all permutations of given letters
@@ -88,10 +93,14 @@ print(words)
 print(f"Number of valid words: {len(words)}")
 
 ```
-['a', 'ab', 'abd', 'abit', 'abn', 'abt', 'ad', 'adib', 'adin', 'adit', 'ai', 'aid', 'ain', 'aint', 'ait', 'an', 'and', 'andi', 'ani', 'ant', 'anti', 
-'at', 'ati', 'b', 'ba', 'bad', 'bai', 'bain', 'bait', 'ban', 'band', 'bandi', 'bandit', 'bani', 'bant', 'bat', 'bd', 'bi', 'bid', 'bin', 'bind', 'bint', 'bit', 
-'bn', 'bt', 'd', 'da', 'dab', 'dain', 'daint', 'dan', 'dani', 'dat', 'db', 'di', 'dia', 'dian', 'dib', 'din', 'dint', 'dit', 'dita', 'dn', 'dt', 'i', 'ia', 'ian', 
-'ib', 'iba', 'ibad', 'iban', 'id', 'ida', 'idant', 'in', 'inbd', 'ind', 'int', 'inta', 'it', 'ita', 'itd', 'n', 'na', 'nab', 'nad', 'naib', 'naid', 'nat', 'nb', 'nd', 
-'ni', 'nib', 'nid', 'nit', 'nt', 't', 'ta', 'tab', 'tabi', 'tabid', 'tad', 'tai', 'tain', 'tan', 'tb', 'td', 'ti', 'tib', 'tid', 'tin', 'tina', 'tind', 'tn']
-Number of valid words: 114
+Single-letter words in dictionary: {'p', 'q', 'r', 'g', 'y', 'd', 'o', 'z', 'k', 'l', 'v', 'n', 'a', 'f', 'w', 'e', 
+'h', 't', 'c', 'i', 'j', 's', 'u', 'm', 'b', 'x'}
+['a', 'ab', 'abd', 'abit', 'abn', 'abt', 'ad', 'adib', 'adin', 'adit', 'ai', 'aid', 'ain', 'aint', 'ait', 'an', 
+'and', 'andi', 'ani', 'ant', 'anti', 'at', 'ati', 'ba', 'bad', 'bai', 'bain', 'bait', 'ban', 'band', 'bandi', 
+'bandit', 'bani', 'bant', 'bat', 'bd', 'bi', 'bid', 'bin', 'bind', 'bint', 'bit', 'bn', 'bt', 'da', 'dab', 'dain', 
+'daint', 'dan', 'dani', 'dat', 'db', 'di', 'dia', 'dian', 'dib', 'din', 'dint', 'dit', 'dita', 'dn', 'dt', 'i', 
+'ia', 'ian', 'ib', 'iba', 'ibad', 'iban', 'id', 'ida', 'idant', 'in', 'inbd', 'ind', 'int', 'inta', 'it', 'ita', 
+'itd', 'na', 'nab', 'nad', 'naib', 'naid', 'nat', 'nb', 'nd', 'ni', 'nib', 'nid', 'nit', 'nt', 'ta', 'tab', 'tabi', 
+'tabid', 'tad', 'tai', 'tain', 'tan', 'tb', 'td', 'ti', 'tib', 'tid', 'tin', 'tina', 'tind', 'tn']
+Number of valid words: 110
 ```
