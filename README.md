@@ -23,13 +23,3 @@ The TABIND Scrabble Project is a Python-based application designed to generate a
 
 4. **Downloading the Word List:**
    - A word list is downloaded from a specified URL and used as the dictionary for filtering valid words.
-
-## Installation
-
-To use this project, clone the repository and make sure you have Python installed. The required libraries are `itertools` and `urllib`.
-
-```bash
-git clone https://github.com/yourusername/tabind-scrabble-project.git
-cd tabind-scrabble-project
-
-
